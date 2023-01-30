@@ -1,0 +1,9 @@
+body {
+    min-height: 100%;
+    margin: 2em;
+}
+
+.responsive-img {
+    width: 80%;
+    height: auto;
+}
