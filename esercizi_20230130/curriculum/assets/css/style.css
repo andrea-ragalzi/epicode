@@ -1,0 +1,8 @@
+body {
+    min-height: 100%;
+}
+
+.responsive-img {
+    width: 30%;
+    height: auto;
+}
