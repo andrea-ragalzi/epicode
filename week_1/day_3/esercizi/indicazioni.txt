@@ -1,0 +1,13 @@
+IMMAGINE POSTER DEL VIDEO:
+
+https://www.simplyrecipes.com/thmb/zF72dLHMKcc-jkJE76eOpXvBSD0=/720x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2020__12__Cranberry-Brie-Onion-Focaccia-LEAD-3-de2a320146654a1e975487ca943bfaa3.jpg
+
+PRIMO LINK FINTO
+
+SECONDO LINK:
+https://www.simplyrecipes.com/recipes/focaccia_with_caramelized_onions_cranberries_and_brie/
+
+AREA NAV
+sfondo: #fefbf1
+bordo: #ffd977
+testo: #004d4d
