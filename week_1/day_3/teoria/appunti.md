@@ -71,6 +71,10 @@ Seleziona ogni elemento h3 preceduto da un elemento h2.
 A schermo si usano le famiglie di caratteri NON ornati, mentre su foglio quelli ornati, questo per la leggilbilita.
 
 
+## Pseudo classi
+
+
+
 
 ## ALTRO
 

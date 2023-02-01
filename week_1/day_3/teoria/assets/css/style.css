@@ -18,13 +18,80 @@ h2+h3 {
     text-decoration: underline;
 }
 
-li+li {
+#adiacenti li+li {
     color: red;
     margin-left: 10px;
 }
 
 /* SELETTORE GENERALE DI FRATELLI */
 
-h2~h3 {
+#fratelli~h3 {
     text-decoration: underline;
+}
+
+/* Pseudo-class:hover */
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: cyan;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+/* ::hover - ::after */
+
+#before li::before {
+    content: 'Studente: ';
+}
+
+#before li::after {
+    content: '- Corso Epicode FS0123: ';
+}
+
+#test p:first-child {
+    color: yellow;
+}
+
+#test a:last-child {
+    color: green;
+}
+
+#test a:first-of-type {
+    color: pink;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 30px;
+}
+
+table,
+td,
+th {
+    border: 2px solid black;
+}
+
+thead th:nth-child(2) {
+    background-color: cyan;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: gray;
+}
+
+tbody tr:nth-child(even) {
+    background-color: orange;
+}
+
+tbody tr:hover {
+    background-color: coral;
+}
+
+thead > tr > th:nth-child(3) {
+    background-color: darkslategrey;
 }
