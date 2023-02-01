@@ -1,0 +1,38 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 0.8rem;
+}
+
+nav>img {
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    width: 10em;
+}
+
+nav>p {
+    background-color: #fefbf1;
+    border-top: 1px solid #ffd977;
+    color: #004d4d;
+    text-align: center;
+}
+
+
+header>div,
+aside,
+main,
+footer {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+    video {
+        width: 25em;
+    }
+}
