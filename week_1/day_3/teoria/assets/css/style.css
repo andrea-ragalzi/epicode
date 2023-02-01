@@ -1,0 +1,30 @@
+/* SELETTORE DI DISCENDENTI */
+
+#container h3 {
+    font-size: 25px;
+    color: red
+}
+
+/* SELETTORE DI FIGLI DIRETTI */
+
+#figlidiretti>h3 {
+    font-size: 25px;
+    color: red;
+}
+
+/* SELETTORE DI FRATELLI ADIACENTI */
+
+h2+h3 {
+    text-decoration: underline;
+}
+
+li+li {
+    color: red;
+    margin-left: 10px;
+}
+
+/* SELETTORE GENERALE DI FRATELLI */
+
+h2~h3 {
+    text-decoration: underline;
+}
