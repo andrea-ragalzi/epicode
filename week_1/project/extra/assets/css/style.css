@@ -40,13 +40,9 @@ main {
     background-image: url(../images/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px;
+    padding: 80px 300px;
     margin-bottom: 50px;
     height: 400px;
-}
-
-#first-section>h1 {
-    margin-bottom: 40px;
 }
 
 #link-footer {
@@ -118,12 +114,12 @@ footer>h2 {
 }
 
 address {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: #c8e7f0;
     font-size: 0.8rem;
 }
 
 address>hr {
-    width: 50%;
+    width: 15%;
     color: #c8e7f0;
 }
