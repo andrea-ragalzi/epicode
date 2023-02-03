@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600&family=Prata&display=swap');
+
+.h6-baltoro {
+    background-image: linear-gradient(to right, #466c92, #b3bdc2);
+}
+
+.h6-acongua {
+    background-image: linear-gradient(to right, #5c637e, #c2c7db);
+}
+
+.h6-index {
+    background-image: linear-gradient(to right, #aeafb0, #444d3b);
+}
+
+.h6-monte_bianco {
+    background-image: linear-gradient(to right, rgb(38, 83, 138), rgb(186, 189, 192));
+}
+
+.h6-monte_vinson {
+    background-image: linear-gradient(to right, rgb(87, 97, 111), rgb(171, 182, 198));
+}
+
+.image-container {
+    height: 500px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.image-container-index {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/00/IMG_2124_Everest.jpg");
+}
+
+.image-container-baltoro {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Baltoro_glacier_from_air.jpg/1280px-Baltoro_glacier_from_air.jpg");
+}
+
+.image-container-acongua {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Aconcagua.8.22.03w.jpg/1280px-Aconcagua.8.22.03w.jpg");
+}
+
+.image-container-monte_bianco {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mont_Blanc%2C_Mont_Maudit%2C_Mont_Blanc_du_Tacul.jpg/1280px-Mont_Blanc%2C_Mont_Maudit%2C_Mont_Blanc_du_Tacul.jpg");
+}
+
+.image-container-monte_vinson {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Mount_Vinson_from_NW_at_Vinson_Plateau_by_Christian_Stangl_%28flickr%29.jpg/1280px-Mount_Vinson_from_NW_at_Vinson_Plateau_by_Christian_Stangl_%28flickr%29.jpg");
+}
+
+.list-link {
+    text-decoration: none;
+}
+
+.list-link-acongua:visited {
+    color: #5c637e;
+}
+
+.list-link-baltoro:visited {
+    color: #466c92;
+}
+
+.list-link-index:visited {
+    color: #444d3b;
+}
+
+.list-link-monte_bianco {
+    color: rgb(38, 83, 138);
+}
+
+.list-link-monte_vinson {
+    color: rgb(87, 97, 111);
+}
+
+.main-section {
+    padding: 20px;
+}
+
+.name-link {
+    font-weight: 600;
+    font-style: italic;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    text-align: center;
+}
+
+h1,
+h3 {
+    font-family: 'Prata', serif;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+h6 {
+    padding: 22px;
+    margin-bottom: 0;
+    margin-top: 56px;
+    color: white;
+    border-radius: 6px;
+}
+
+li {
+    padding: 6px 0px 6px 22px;
+    border-bottom: 1px solid;
+    border-color: #dfdfdf;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}

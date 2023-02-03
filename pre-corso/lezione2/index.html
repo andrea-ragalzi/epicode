@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Iscrizione a Music for Everyone</title>
+</head>
+
+<body>
+    <div class="container text-center mt-3">
+        <h1>Iscrizione a Music for Everyone</h1>
+        <form onsubmit="alert('Registrazione inviata!')">
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Nome">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Cognome">
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Indirizzo">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="mb-3">
+                <input type="date" class="form-control">
+            </div>
+            <div class="mb-3">
+                <input type="number" class="form-control" placeholder="Cellulare">
+            </div>
+            <div class="btn-group mb-3" role="group" aria-label="Basic checkbox toggle button group">
+                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck1">Rock</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck2">Classica</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck3">Pop</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck4">Indie</label>
+            </div>
+            <div class="mb-3">
+                <button type="submit">Invia registrazione</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

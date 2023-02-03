@@ -1,0 +1,54 @@
+
+    Cos’è HTML?
+        HTML significa Hyper Text Markup Language
+        HTML è il linguaggio di markup standard per la creazione di pagine web
+        HTML descrive la struttura di una pagina web
+        HTML consiste in una serie di elementi (o tag) che descrivono i differenti componenti di una pagina web (titolo, paragrafi, immagini)
+
+     
+    Esempio di documento HTML
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Prima pagina</title>
+      </head>
+      <body>
+        <h1>Questo è il titolo</h1>
+        <p>Un paragrafo.</p>
+      </body>
+    </html>
+
+    In questo esempio:
+        <!DOCTYPE html> definisce che il documento è di tipo HTML5
+        Il tag <html> è l’elemento radice di ogni pagina HTML
+        Il tag <head> contiene meta-informazioni riguardanti la pagina HTML
+        Il tag <title> specifica il titlo della pagina HTML (che viene mostrato nella barra del titolo del browser o nel tab della pagina)
+        Il tag <body> è un contenitore per tutti gli elementi visibili della pagina, come titoli, paragrafi, immagini, links, tabelle, liste ecc.
+        Il tag <h1> crea un grande titolo nella pagina
+        Il tag <p> crea un elemento di tipo paragrafo
+    Cos’è un elemento HTML?
+
+    Un elemento HTML è definito da un tag di apertura, del contenuto e un tag di chisura.
+
+    <tag>Inserisci del contenuto qui</tag>
+
+    Il tag utilizzato definisce che elemento verrà renderizzato dal browser.
+
+    Alcuni elementi poi non necessitano di un tag di chiusura, e sono delimitati solamente da un unico tag: ad esempio è il caso ad esempio dei tag <img />, <br />, <input />, …
+
+     
+    Tag HTML più utilizzati
+        Titoli: definiti dai tag <h1> a <h6>
+        <h1>Un titolo!</h1>
+        Paragrafi: definiti dal tag <p>
+        <p>Un paragrafo!</p>
+        Links: definiti dal tag <a> con la destinazione specificata nell’attributo href
+        <a href="https://epicode.com">EPICODE</a>
+        Immagini: definiti dal tag <img />. La sorgente dell’immagine è fornita con l’attributo src
+        <img src="https://epicode.com/logo.png" alt="epicode-logo" />
+        Sezioni: definite dal tag <div>, creano un blocco di contenuto nella pagina
+        <div>
+        <p>Paragrafo di testo </p>
+        <h2>Sottotitolo</h2>
+        </div>

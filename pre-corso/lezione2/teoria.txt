@@ -1,0 +1,36 @@
+
+
+    Esploriamo altri tag HTML piuttosto comuni:
+        <input />
+        <form>
+        <button>
+
+    Questi elementi sono cruciali per raccogliere informazioni da parte dell’utente e interagire con esso.
+
+     
+    Input
+
+    Sono sicuro che avrai incontrato i tag input centinaia di volte navigando online.
+    Comunemente hanno questo aspetto:
+
+    Questi campi di testo sono normalmente compilati dall’utente per raccogliere delle informazioni all’interno di una pagina web.
+
+    I tag input possono prendere diversi aspetti a seconda dell’attributo type che gli viene fornito: ad esempio type="password" maschererà i caratteri inseriti, type="date" mostrerà un piccolo calendario per selezionare una data, type="color" mostrerà una palette dove scegliere un colore e così via.
+
+    Una lista completa di types può essere trovata nei link alla documentazione forniti in cima a questa pagina.
+
+     
+    Form
+
+    Un tag form può venire utilizzato per contenere diversi elementi al suo interno al fine di ricavarne un’entità “unica”.
+
+    Questo singolo elemento fornisce proprietà e vantaggi aggiuntivi, come delle regole di validazione per i diversi campi o la possibilità di reagire ad un evento di tipo “submit”.
+
+     
+    Button
+
+    I tag button renderizzano dei bottoni cliccabili nella tua pagina web. Il loro scopo è eseguire una determinata azione quando cliccati (o toccati su schermi touch).
+
+    Ora come ora non sappiamo come scrivere del codice da eseguire quando clicchiamo sul pulsante, ma mostrare un messaggio all’utente non è così difficile:
+
+    <button onclick="alert('Dati salvati!')">Save</button>
