@@ -1,0 +1,9 @@
+body background-color: #415fe1
+
+effetto di hover sia sul link che sull'immagine
+
+alert
+
+e poi stampe su console e documento
+
+scrivere le varibiali con 4 convenzioni diverse
