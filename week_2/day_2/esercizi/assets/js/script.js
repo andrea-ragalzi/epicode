@@ -32,13 +32,11 @@ document.getElementById('iniziale').innerHTML += INIZIALE;
 
 // addizione e incremento
 value = INIZIALE + 15;
-document.getElementById('valore1').innerHTML =
-    document.getElementById('valore1').innerHTML + value + ', ' + ++value;
+document.getElementById('valore1').innerHTML += value + ', ' + ++value;
 
 // sottrazione e decremento
 value = INIZIALE - 10;
-document.getElementById('valore2').innerHTML =
-    document.getElementById('valore2').innerHTML + value + ', ' + --value;
+document.getElementById('valore2').innerHTML += value + ', ' + --value;
 
 // moltiplicazione
 value = INIZIALE * 3;
