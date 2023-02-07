@@ -24,36 +24,36 @@ mario = 'Carla';
 document.getElementById('let3').innerHTML = mario;
 document.getElementById('final2').innerHTML = mario;
 
-let iniziale = 15;
+const INIZIALE = 15;
 let value;
 
 // valore iniziale
-document.getElementById('iniziale').innerHTML += iniziale;
+document.getElementById('iniziale').innerHTML += INIZIALE;
 
 // addizione e incremento
-value = iniziale + 15;
+value = INIZIALE + 15;
 document.getElementById('valore1').innerHTML =
     document.getElementById('valore1').innerHTML + value + ', ' + ++value;
 
 // sottrazione e decremento
-value = iniziale - 10;
+value = INIZIALE - 10;
 document.getElementById('valore2').innerHTML =
     document.getElementById('valore2').innerHTML + value + ', ' + --value;
 
 // moltiplicazione
-value = iniziale * 3;
+value = INIZIALE * 3;
 document.getElementById('valore3').innerHTML += value;
 
 // divisione
-value = iniziale / 3;
+value = INIZIALE / 3;
 document.getElementById('valore4').innerHTML += value;
 
 // concatenazione
-let isNum = (typeof iniziale === 'number') ? 'e un numero' : 'non e un numero';
+let isNum = (typeof INIZIALE === 'number') ? 'e un numero' : 'non e un numero';
 if (isNum) {
-    value = iniziale + ' e un numero';
+    value = INIZIALE + ' e un numero';
 }
 else {
-    value = iniziale + ' non e un numero';
+    value = INIZIALE + ' non e un numero';
 }
 document.getElementById('valore5').innerHTML += value;
