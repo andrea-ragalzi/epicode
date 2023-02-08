@@ -89,7 +89,7 @@ document.getElementById('array8').innerHTML += array2;
 array2.splice(3, 1);
 document.getElementById('array9').innerHTML += array2;
 
-array2.splice(0, 2);
+array2.splice(1, 2);
 document.getElementById('array10').innerHTML += array2;
 
 array2.splice(1, 1, 'Anna');
