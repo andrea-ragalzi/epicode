@@ -166,7 +166,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
       break;
   }
 }
-
+console.log(eyeColor);
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio
