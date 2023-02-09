@@ -1,0 +1,9 @@
+html, body {
+    text-align: center;
+    background-color: black;
+    color: aquamarine;
+}
+
+div:hover {
+    color: blueviolet;
+}
