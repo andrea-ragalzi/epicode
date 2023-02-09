@@ -274,4 +274,8 @@ function hair() {
   return y;
 }
 
-console.log(`The found character name is: ${randomCharacter.name} \n ${pronoun()} is ${randomCharacter.height} cm tall \n and ${hair()}, \n with ${randomCharacter.skin_color} skin.`)
+console.log(
+  `The found character name is: ${randomCharacter.name} \n${pronoun()} is ` +
+  `${randomCharacter.height} cm tall \nand ${hair()}, ` +
+  `\nwith ${randomCharacter.skin_color} skin.`
+)
