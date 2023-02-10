@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary-color: #222831;
+    --secondary-color: #eeeeee;
+    --font-color: #212121;
+    --bg-color: #00adb5;
+    --heading-color: #eeeeee;
+}
+
+html,
+body {
+    margin: 0px;
+    text-align: center;
+    background-color: var(--bg-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+header {
+    background-color: var(--primary-color);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 80px;
+    font-size: 1.4rem;
+    padding: 0px 0px 0px 0px;
+}
+
+li {
+    float: left;
+    padding-top: 15px;
+}
+
+li a {
+    display: block;
+    color: var(--heading-color);
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+#form-wrap {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    width: 300px;
+    margin: auto;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+#display {
+    width: 15em;
+    height: 3em;
+    font-size: 1.2em;
+    text-align: right;
+}
+
+input[type="text"] {
+    margin: 1px;
+    background-color: var(--secondary-color);
+    border-radius: 25px;
+    pointer-events: none;
+    color: black;
+}
+
+input[type="button"] {
+    width: 3em;
+    height: 3em;
+    font-size: 1.2em;
+    background-color: var(--secondary-color);
+    border-radius: 25px;
+    margin: 1px;
+}
+
+input:hover {
+    background-color: var(--bg-color);
+}
+
+input[type="button"][disabled] {
+    opacity: 0.4;
+    cursor: not-allowed !important;
+}
+
+footer {
+    color: #c8e7f0;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer>h2 {
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+address {
+    margin-bottom: 50px;
+    color: var(--secondary-color);
+}
+
+address>div {
+    display: inline;
+    margin: 0px 10px;
+}
+
+div>a {
+    color: var(--heading-color);
+}
+
+@media screen and (max-width: 800px) {
+    address>div {
+        display: block;
+        margin: 0px 10px;
+    }
+}
