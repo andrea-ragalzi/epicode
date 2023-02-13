@@ -399,3 +399,4 @@ var matrixGenerator = (x, y) => {
     return result;
 }
 console.log(matrixGenerator(3, 2));
+console.log(matrixGenerator(3, 8));
