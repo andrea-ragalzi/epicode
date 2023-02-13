@@ -200,19 +200,6 @@ var checkArray = (numbers) => {
     return tot;
 }
 console.log(checkArray(giveMeRandom(5)));
-var maxShoppingCart = () => {
-    let maxValue = shoppingCart[0];
-    if (shoppingCart.length == 1) {
-        return maxValue;
-    }
-    shoppingCart.forEach(element => {
-        if (maxValue.price < element.price) {
-            maxValue = element;
-        }
-    });
-    return maxValue;
-}
-console.log(maxShoppingCart());
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -229,21 +216,8 @@ function Product(_price, _name, _id, _quantity) {
 }
 
 var shoppingCart = [
-    new Product(300.00, 'desktop', 0, 1), console.log('ESERCIZIO EXTRA 4');
-var maxShoppingCart = () => {
-    let maxValue = shoppingCart[0];
-    if (shoppingCart.length == 1) {
-        return maxValue;
-    }
-    shoppingCart.forEach(element => {
-        if (maxValue.price < element.price) {
-            maxValue = element;
-        }
-    });
-    return maxValue;
-}
-console.log(maxShoppingCart());
-new Product(999.99, 'notebook', 1, 1),
+    new Product(300.00, 'desktop', 0, 1),
+    new Product(999.99, 'notebook', 1, 1),
     new Product(400.00, 'tablet', 2, 1)
 ]
 
