@@ -12,8 +12,10 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO 1');
 var area = (l1, l2) => l1 * l2;
 console.log(area(2, 5));
+
 
 
 /* ESERCIZIO 2
@@ -23,6 +25,7 @@ console.log(area(2, 5));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO 2');
 var crazySum = (n1, n2) => {
     if (n1 === n2) {
         return (n1 + n2) * 3;
@@ -37,6 +40,7 @@ console.log(crazySum(3, 3));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO 3');
 var crazyDiff = (n) => {
     if (n > 19) {
         return Math.abs(n - 19) * 3;
@@ -54,6 +58,7 @@ console.log(crazyDiff(-20));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO 4');
 var boundary = (n) => {
     if ((20 < n) && (20 <= 100)) {
         return true;
@@ -77,6 +82,7 @@ console.log(boundary(500));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO 5');
 var epify = (target) => {
     if (target.startsWith('EPICODE')) {
         return target;
@@ -93,6 +99,7 @@ console.log(epify('EPICODE PHP'));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO 6');
 var check3and7 = (num) => {
     if (num < 0) {
         return false;
@@ -116,17 +123,7 @@ console.log(check3and7(-4));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/*
-var reverseString = (target) => {
-    let reversed = '';
-    for (let i = target.length - 1; i >= 0; i--) {
-        reversed =+ target[i];
-    }
-    return reversed;
-}
-console.log(reverseString('test'));
-*/
-
+console.log('ESERCIZIO 7');
 var reverseString = (target) => {
     return target.split('').reverse().join('');
 }
@@ -138,6 +135,7 @@ console.log(reverseString('test'));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO 8');
 var upperFirst = (target) => {
     let words = target.split(' ');
     let result = '';
@@ -155,6 +153,7 @@ console.log(upperFirst('ciao mondo e java'));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO 9');
 var cutString = (target) => {
     return target.slice(1, target.length - 1);
 }
@@ -165,6 +164,7 @@ console.log(cutString('Paperino'));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO 10');
 var giveMeRandom = (n) => {
     let array = [];
     for (let index = 0; index < n; index++) {
@@ -185,6 +185,21 @@ console.log(giveMeRandom(100));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO EXTRA 1');
+var checkArray = (numbers) => {
+    let tot = 0;
+    numbers.forEach(element => {
+        if (element > 5) {
+            console.log(`${element} e maggiore di 5`);
+            tot += element;
+        }
+        else {
+            console.log(`${element} non e maggiore di 5`);
+        }
+    });
+    return tot;
+}
+console.log(checkArray(giveMeRandom(5)));
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -192,6 +207,28 @@ console.log(giveMeRandom(100));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO EXTRA 2');
+function Product(_price, _name, _id, _quantity) {
+    this.price = _price;
+    this.name = _name;
+    this.id = _id;
+    this.quantity = _quantity;
+}
+
+var shoppingCart = [
+    new Product(300.00, 'desktop', 0, 1),
+    new Product(999.99, 'notebook', 1, 1),
+    new Product(400.00, 'tablet', 2, 1)
+]
+
+var shoppingCartTotal = () => {
+    let tot = 0;
+    shoppingCart.forEach(element => {
+        tot += element.price * element.quantity;
+    });
+    return tot;
+}
+console.log(shoppingCartTotal());
 
 /* EXTRA 3
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -199,6 +236,13 @@ console.log(giveMeRandom(100));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('Esercizio Extra 3');
+var addToShoppingCart = (newProduct) => {
+    shoppingCart.push(newProduct);
+    return shoppingCart.length;
+}
+console.log(addToShoppingCart(new Product(100.00, 'monitor', 3, 2)));
+console.log(shoppingCart);
 
 /* EXTRA 4
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -206,6 +250,20 @@ console.log(giveMeRandom(100));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO EXTRA 4');
+var maxShoppingCart = () => {
+    let maxValue = shoppingCart[0];
+    if (shoppingCart.length == 1) {
+        return maxValue;
+    }
+    shoppingCart.forEach(element => {
+        if (maxValue.price < element.price) {
+            maxValue = element;
+        }
+    });
+    return maxValue;
+}
+console.log(maxShoppingCart());
 
 /* EXTRA 5
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -213,6 +271,11 @@ console.log(giveMeRandom(100));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO EXTRA 5');
+var latestShoppingCart = () => {
+    return shoppingCart[shoppingCart.length - 1];
+}
+console.log(latestShoppingCart());
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
@@ -220,18 +283,68 @@ console.log(giveMeRandom(100));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO EXTRA 6');
+var loopUntil = (target) => {
+    if ((target < 1) && (target > 8)) {
+        return;
+    }
+    let count = 0;
+    while (count < 3) {
+        let randomValue = Math.floor(Math.random() * 10)
+        console.log(randomValue);
+        if (randomValue > target) {
+            count++;
+        }
+        else {
+            count = 0;
+        }
+    }
+}
+loopUntil(8);
+console.log('End');
 
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO EXTRA 7');
+var average = (values) => {
+    let sum = 0;
+    let len = 0;
+    values.forEach(element => {
+        if (typeof element === 'number') {
+            sum += element;
+            len++;
+        }
+    });
+    return sum / len;
+}
+console.log(average([0, 1, 2, 3, 4, 'Python']));
+
 
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO EXTRA 8');
+var longest = (words) => {
+    if (words.length === 1) {
+        return words[0];
+    }
+    let longWord = '';
+    for (let word of words) {
+        if (word.length > longWord.length) {
+            longWord = word;
+        }
+    }
+    return longWord;
+};
+console.log(longest(['Piero', 'Ermanno', 'Paola', 'Gina', 'Isabella']));
+console.log(longest([]));
+console.log(longest(['Piero', 'Ermanno', 'Paola', 'Gina']));
+console.log(longest(['Ezecchiele', 'Piero', 'Ermanno', 'Paola', 'Gina', 'Isabella']));
 
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
@@ -239,12 +352,23 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO EXTRA 9');
+var spamFilter = (emailContent) => {
+    return emailContent.includes('SPAM') || emailContent.includes('SCAM')
+        ? true : false;
+}
+console.log(spamFilter('SPAM C++'));
+console.log(spamFilter('Delphi SPAM'));
+console.log(spamFilter('Go SCAM'));
+console.log(spamFilter('Go'));
+
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO EXTRA 10');
 var daysSinceDate = (target) => {
     let today = new Date();
     let differenceInTime = today.getTime() - target.getTime();
@@ -263,3 +387,15 @@ console.log(daysSinceDate(new Date('2024 02 13')));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+console.log('ESERCIZIO EXTRA 11');
+var matrixGenerator = (x, y) => {
+    let result = [];
+    for (let i = 0; i < y; i++) {
+        result[i] = [];
+        for (let j = 0; j < x; j++) {
+            result[i][j] = [`${i}${j}`];
+        }
+    }
+    return result;
+}
+console.log(matrixGenerator(3, 2));
