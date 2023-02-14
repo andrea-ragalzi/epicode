@@ -328,8 +328,17 @@ console.log(getMovieById('Giocatore1')); // Nothing
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 console.log('ESERCIZIO 17');
+var sumYears = () => {
+  return movies.reduce((acc, movie) => acc + parseInt(movie.Year), 0);
+}
+console.log(sumYears());
 
 /* ESERCIZIO 18 (EXTRA)
   Scrivi una funzione per recuperare tutti i film dall'array fornito che contengono una parola fornita.
 */
 console.log('ESERCIZIO 18');
+var searchByWord = (word) => {
+  return movies.filter(movie => movie.Title.includes(word));
+}
+console.log(searchByWord('Ring'));
+
