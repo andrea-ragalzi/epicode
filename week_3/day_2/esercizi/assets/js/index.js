@@ -65,14 +65,13 @@ console.log(evenNumbers([100, 17, -2000, 13]));
   Scrivi una funzione per sommare a catena i numeri contenuti in un array.
 */
 
-/*
 console.log('ESERCIZIO 6');
 var sumArray = (numbers) => {
-  console.log(reverseArray([]));
+  return numbers.reduce((acc, number) => acc + number, 0);
 }
 console.log(sumArray([0, 1, 2, 3]));
 console.log(sumArray([-100, 100, -200, 200]));
-*/
+
 
 /* ESERCIZIO 7
   Scrivi una funzione per incrementare di 1 tutti i valori numerici in un array.
