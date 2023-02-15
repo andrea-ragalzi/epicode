@@ -1,12 +1,21 @@
 html,
+html,
 body {
     margin: 0;
 }
 
-.new-class {
-    background-color: green;
+h1 {
+    text-align: center;
 }
 
-.custom-label:hover {
-    background-color: aqua;
+#wrap-newTask {
+    text-align: center;
+}
+
+#taskList {
+    list-style-type: none;
+}
+
+.deleteButton {
+    text-align: right;
 }
