@@ -1,4 +1,12 @@
-html, body {
+html,
+body {
     margin: 0;
 }
 
+.new-class {
+    background-color: green;
+}
+
+.custom-label:hover {
+    background-color: aqua;
+}

@@ -9,10 +9,16 @@ addTaskButton.addEventListener("click", function (event) {
     }
 
     const taskItem = document.createElement("li");
-    taskItem.textContent = newTask.value;
+    taskItem.classList.add("custom-li");
     taskList.appendChild(taskItem);
 
+    const labelItem = document.createElement("label");
+    labelItem.textContent = newTask.value;
+    labelItem.classList.add("custom-label");
+    taskItem.appendChild(labelItem);
+
     const deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete");
     deleteButton.textContent = "Elimina";
     taskItem.appendChild(deleteButton);
 
