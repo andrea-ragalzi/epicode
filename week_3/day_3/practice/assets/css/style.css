@@ -10,10 +10,26 @@ h1 {
 
 #wrap-newTask {
     text-align: center;
+    margin-bottom: 20px;
+}
+
+#wrap-list {
+    width: 60%;
+    text-align: center;
 }
 
 #taskList {
     list-style-type: none;
+}
+
+#custom-list {
+    margin-left: 5px;
+}
+
+.custom-label {
+    padding: 2px;
+    width: 20px;
+    text-align: left;
 }
 
 .deleteButton {
