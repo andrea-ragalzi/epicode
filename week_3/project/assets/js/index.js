@@ -52,6 +52,8 @@ console.log(me);
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array 'skills' contenuto nell'oggetto 'me'.
 */
 console.log('ESERCIZIO F');
+me.skills.push('lua');
+console.log(me);
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array 'skills' contenuto nell'oggetto 'me'.
