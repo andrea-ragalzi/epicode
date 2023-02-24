@@ -15,13 +15,13 @@ Potete lavorare contemporaneamente sui due macrotask se preferite, ma andranno p
 
 Le pagine che dovrete creare sono:
 
-![Welcome Page](/assets/doc/welcome.png "Welcome Page")
+![Welcome Page](buildWeek1/assets/doc/welcome.png "Welcome Page")
 
-![Welcome Page](/assets/doc/benchmark.png "Welcome Page")
+![Benchmark Page](buildWeek1/assets/doc/benchmark.png "Benchmark Page")
 
-![Welcome Page](/assets/doc/results.png "Welcome Page")
+![Results Page](buildWeek1/assets/doc/results.png "Results Page")
 
-![Welcome Page](/assets/doc/feedback.png "Welcome Page")
+![Feedback Page](buildWeek1/assets/doc/feedback.png "Feedback Page")
 
 ## Tips
 
