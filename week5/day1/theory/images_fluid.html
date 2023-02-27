@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Immagini responsive</title>
+    <style>
+      /* width: 100% rende l'immagine sempre grande quanto il viewport,
+        sia rimpicciolendola che, ahimè, ingrandola (rischia di deformare la pic) */
+      /* article img.responsive {
+        width: 100%;
+      } */
+
+      /* tutti i benefici di width: 100%, ma NON rischiamo di interpolare l'immagine su schermi che eccedono la sua risoluzione originale */
+      article img.responsive {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <img class="responsive" src="https://placekitten.com/700" />
+    </article>
+  </body>
+</html>

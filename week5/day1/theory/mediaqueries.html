@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      /* scriviamo il CSS qui! */
+      /* questo CSS verrà applicato su dispositivi MOBILE,
+      perchè via via che lo schermo si ingrandisce stabilisco regole
+      "incrementali" per la visualizzazione degli elementi */
+      body {
+        margin: 0;
+      }
+
+      h1 {
+        color: red;
+        font-size: 3em;
+      }
+
+      @media screen and (min-width: 391px) {
+        /* questa media query colpisce tutti i dispositivi con larghezza schermo
+        maggiore di 390px, quindi NON più smartphone */
+        /* smartphone in landscape */
+        h1 {
+          color: green;
+          font-size: 2em;
+        }
+      }
+
+      /* è possibile concatenare diverse condizioni per la mediaquery */
+      /* and === && */
+      /* la mediaquery verrà applicata solamente se TUTTE le condizioni
+      vengono rispettate in un determinato momento */
+      @media screen and (min-width: 768px) and (orientation: portrait) {
+        /* qua inserisco le regole per la tipologia di schermo immediatamente superiore, ovvero il tablet in modalità portrait */
+        h1 {
+          color: blue;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        /* laptop */
+        h1 {
+          color: purple;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        /* desktop */
+        h1 {
+          display: none;
+          /* display: none nasconde l'elemento e rende disponibile agli altri elementi della pagina lo spazio da lui precedentemente occupato */
+          /* visibility: hidden; */
+          /* visibility: hidden nasconde l'elemento ma non rende disponibile agli elementi della pagina lo spazio da lui precedentemente occupato */
+        }
+      }
+
+      /* stili specifici per la stampa */
+      @media print {
+        h1 {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- primi esperimenti: definiamo lo stile per <h1> su mobile e inseriamo
+        successivamente delle mediaqueries per alterarne l'aspetto su schermi
+    di dimensione via via superiori -->
+    <h1>LEZIONE SULLE MEDIAQUERIES</h1>
+    <h3>Vediamo come funzionano :)</h3>
+  </body>
+</html>
