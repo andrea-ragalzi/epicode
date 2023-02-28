@@ -199,6 +199,9 @@ h1+p {
   section {
     border-radius: 20px;
   }
+  .wrapFixedBlue, .wrapFixedViolet {
+    display: none;
+  }
 }
 
 .divRelative {
