@@ -29,6 +29,9 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 @media screen and (min-width: 800px) {
@@ -123,6 +126,9 @@ section h2 {
   font-weight: bold;
   background-color: #a3a3a3;
   padding: 0px 1em;
+  position: absolute;
+  bottom: 80%;
+  left: 5%;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -195,8 +201,17 @@ h1+p {
   }
 }
 
-.imgUnderline {
+.divRelative {
   position: relative;
+  z-index: 1;
+}
+
+.imgUnderline {
+  position: absolute;
+  top: 92%;
+  opacity: 50%;
+  z-index: 0;
+  width: 100%;
 }
 
 .imgLeft {
@@ -267,6 +282,10 @@ table {
     margin-block-start: 5rem;
     margin-block-end: 6rem;
   }
+
+  .imgUnderline {
+    width: 85%;
+  }
 }
 
 caption {
@@ -313,6 +332,42 @@ button {
   font-weight: bold;
 }
 
+.wrapFixedBlue,
+.wrapFixedViolet {
+  position: fixed;
+  right: 0%;
+  z-index: 2;
+}
+
+.wrapFixedBlue {
+  bottom: 52px;
+}
+
+.wrapFixedViolet {
+  bottom: 0px;
+}
+
+.customButtonViolet,
+.customButtonBlue {
+  display: block;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  color: white;
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #888888;
+  border: solid 2px white;
+  border-radius: 15%;
+}
+
+.customButtonBlue {
+  background-color: blue;
+}
+
+.customButtonViolet {
+  background-color: violet;
+}
+
 @media screen and (min-width: 500px) {
   input {
     display: inline-block;
@@ -328,7 +383,14 @@ button {
   button {
     padding: 15px 30px;
   }
-}
+
+  .wrapFixedBlue {
+    top: 1%;
+  }
+  
+  .wrapFixedViolet {
+    bottom: 1%;
+  }
 
 /* ELEMENTI NELL' ASIDE */
 aside h2 {
@@ -347,11 +409,28 @@ aside div {
   padding: 1em;
 }
 
+aside div {
+  position: relative;
+}
+
+.fa-tag {
+  position: absolute;
+  right: 1%;
+  bottom: 35%;
+  opacity: 10%;
+}
+
 @media screen and (min-width: 1200px) {
   aside div {
     display: inline-block;
     width: 33.333%;
     margin-inline: -2px;
+  }
+
+  .imgUnderline {
+    width: 48%;
+    right: 10%;
+    top: 90%;
   }
 }
 
