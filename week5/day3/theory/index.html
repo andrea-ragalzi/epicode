@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar in flex</title>
+    <style>
+        .main-nav {
+            background-color: orangered;
+            color: white;
+            border-radius: 3px;
+            padding: 1em;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .main-nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .main-nav ul li {
+            margin-left: 1em;
+        }
+
+        @media screen and (max-width: 580px) {
+            .main-nav {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+            }
+
+            .main-nav ul li {
+                margin-bottom: 0.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li>Logo</li>
+            <li>Home</li>
+            <li>Products</li>
+            <li>Sevice</li>
+        </ul>
+        <form onsubmit="">
+            <input type="search" placeholder="Search" required>
+            <button type="submit">Go</button>
+        </form>
+    </nav>
+</body>
+
+</html>

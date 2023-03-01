@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer in FLex</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+        }
+
+        footer {
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top {
+            background-color: #04a2b0;
+            flex-grow: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top p,
+        .bottom p {
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+        }
+
+        .top a {
+            color: white;
+        }
+
+        .medium {
+            background-color: #015d5f;
+            flex-grow: 0.5;
+            display: flex;
+            align-items: center;
+        }
+
+        .medium ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            color: white;
+            width: 100%;
+            padding: 0;
+        }
+
+        .bottom {
+            background-color: #9ed3ca;
+            flex-grow: 1.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icons-container {
+            font-size: 2em;
+            display: flex;
+            justify-content: space-around;
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+        <div class="top">
+            <p>Questions?</p>
+            <p>Write us at <a href="mailto:"> email@example.com</a></p>
+            <div class="icons-container">
+                <span>F</span>
+                <span>I</span>
+                <span>G</span>
+                <span>L</span>
+            </div>
+        </div>
+        <div class="medium">
+            <ul>
+                <li>Privacy Policy</li>
+                <li>Terms of Use</li>
+                <li>Copyright</li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <p>
+                <span id="currentYear"></span>, all rights reserved.
+            </p>
+            <p>
+                Created with ♡ at Epicode
+            </p>
+        </div>
+    </footer>
+    <script>
+        let currentYearReference = document.getElementById('currentYear');
+        currentYearReference.innerText = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
