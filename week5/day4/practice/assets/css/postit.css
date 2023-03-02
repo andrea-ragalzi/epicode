@@ -28,30 +28,46 @@ main {
 }
 
 .postit {
-    width: 15em;
-    height: 15em;
+    width: 20em;
+    height: 20em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 10px 5px 5px black;
+    transition: all 0.5s;
+    z-index: 0;
 }
 
 .postit:hover {
-    transform: ;
+    z-index: 1;
+    width: 25em;
+    height: 25em;
 }
 
 .postit-green {
     background-color: green;
-    rotate: 3deg;
+    rotate: -12deg;
+}
+
+.postit-green:hover {
+    transform: rotate(12deg);
 }
 
 .postit-yellow {
     background-color: yellow;
-    rotate: -3deg;
+    rotate: 1deg;
+}
+
+.postit-yellow:hover {
+    transform: rotate(-1deg);
 }
 
 .postit-violet {
     background-color: violet;
     rotate: -4deg;
+}
+
+.postit-violet:hover {
+    transform: rotate(4deg);
 }
