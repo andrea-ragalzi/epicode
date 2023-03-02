@@ -1,0 +1,57 @@
+html,
+body {
+    height: 100vh;
+    background-color: gray;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.postit-list-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.postit-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+}
+
+.postit {
+    width: 15em;
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 5px 5px black;
+}
+
+.postit:hover {
+    transform: ;
+}
+
+.postit-green {
+    background-color: green;
+    rotate: 3deg;
+}
+
+.postit-yellow {
+    background-color: yellow;
+    rotate: -3deg;
+}
+
+.postit-violet {
+    background-color: violet;
+    rotate: -4deg;
+}
