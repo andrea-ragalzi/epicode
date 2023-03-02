@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trasformazioni</title>
+    <style>
+      /* D R Y */
+      /* don't repeat yourself */
+
+      /* i valori della proprietà transform ci permettono di apportare delle
+      trasformazioni grafiche agli elementi HTML */
+      /* NON è possibile utilizzare queste proprietà per risolvere problemi di impaginazione, o rendere una pagina responsive, in quanto gli elementi
+      occupano fisicamente sempre lo stesso spazio e rischiamo anzi di sovrastare
+      altri elementi per colpa delle nostre rotazioni, ingrandimenti etc. */
+
+      .box {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .rotate {
+        background-color: yellowgreen;
+        /* rotate ruota dei gradi previsti l'oggetto */
+        transform: rotate(288deg);
+      }
+
+      .skew {
+        background-color: rebeccapurple;
+        transform: skew(15deg, 10deg);
+        /* skew storge l'oggetto operando sull'asse x e, opzionalmente, sull'asse y */
+      }
+
+      .scale {
+        background-color: tan;
+        transform: scale(1.25, 0.75);
+        /* scale applica un fattore di scala per ingrandire/rimpicciolire l'oggetto
+        a partire dal valore 1 */
+      }
+
+      .translate {
+        background-color: royalblue;
+        transform: translate(50px, 50px);
+        /* translate sposta l'oggetto sull'asse x e opzionalmente sull'asse y */
+      }
+
+      .multiple {
+        background-color: orangered;
+        /* è possibile applicare multipli valori a transform in questo modo */
+        transform: scale(1.2) rotate(45deg) translate(-35px);
+      }
+
+      h3:last-of-type {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PROPRIETÀ TRANSFORM</h1>
+    <h3>transform rotate</h3>
+    <div class="box rotate">
+      <div>ROTATE</div>
+    </div>
+    <h3>transform skew</h3>
+    <div class="box skew">
+      <div>SKEW</div>
+    </div>
+    <h3>transform scale</h3>
+    <div class="box scale">
+      <div>SCALE</div>
+    </div>
+    <h3>transform translate</h3>
+    <div class="box translate">
+      <div>TRANSLATE</div>
+    </div>
+    <h3>transform multiplo</h3>
+    <div class="box multiple">
+      <div>MULTIPLE</div>
+    </div>
+  </body>
+</html>

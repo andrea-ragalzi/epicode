@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transitions</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box-1 {
+        background-color: green;
+        /* transition: proprietà durata curvaDiAccelerazione ritardo */
+        transition: width 1s;
+      }
+
+      .box-1:hover {
+        width: 500px;
+      }
+
+      .box-2 {
+        background-color: blueviolet;
+        /* transition: proprietà durata curvaDiAccelerazione ritardo */
+        transition: background-color 2s;
+      }
+
+      .box-2:hover {
+        background-color: pink;
+      }
+
+      .box-3 {
+        background-color: orange;
+        /* transition: proprietà durata curvaDiAccelerazione ritardo */
+        transition: transform 5s;
+      }
+
+      /* .box:not(:hover) { */
+      /* transition: transform 5s; */
+      /* è sempre l'animazione in uscita */
+      /* } */
+
+      .box-3:hover {
+        transform: rotate(-720deg);
+        transition: transform 1s;
+        /* applicando una transition anche sull'effetto hover posso specificare
+        un tempo diverso di in/out per l'animazione; il tempo indicato nell'elemento
+        a stato normale diventa l'OUT, mentre quello indicato sull'hover è il tempo
+        dell'animazione in IN (entrata) */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PROPRIETÀ TRANSITION</h1>
+    <h2>BOX CHE SI ALLUNGA ON HOVER</h2>
+    <div class="box box-1"></div>
+    <h2>BOX CHE CAMBIA COLORE ON HOVER</h2>
+    <div class="box box-2"></div>
+    <h2>BOX CHE RUOTA ON HOVER</h2>
+    <div class="box box-3"></div>
+  </body>
+</html>

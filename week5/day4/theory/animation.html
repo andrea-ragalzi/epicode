@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+    <style>
+      body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      .box {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lime;
+        /* animation: nome durata curvaDiAccelerazione delay iterationCount */
+      }
+
+      /* definiamo un'animazione */
+      @keyframes boxAnimation {
+        /* da dove parte */
+        0% {
+          transform: translate(0px);
+        }
+
+        /* metà dell'animazione */
+        50% {
+          transform: translate(300px);
+        }
+
+        /* punto di arrivo */
+        100% {
+          transform: translate(0px);
+        }
+      }
+
+      .box-animated {
+        animation: boxAnimation 6s ease-in 0s infinite;
+      }
+
+      .text-animated {
+        animation: textAnimation 6s ease-in 0s infinite;
+      }
+
+      @keyframes textAnimation {
+        0% {
+          color: white;
+          font-size: 0.5em;
+        }
+
+        50% {
+          color: black;
+          font-size: 1.5em;
+        }
+
+        100% {
+          color: white;
+          font-size: 0.5em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Animazioni in CSS</h1>
+    <button onclick="boxStart()">START!</button>
+    <button id="stopButton">STOP!</button>
+    <button onclick="startStop()">START/STOP</button>
+
+    <div class="box">
+      <div>I'M A BOX</div>
+    </div>
+    <script>
+      const boxStart = function () {
+        // prendo un riferimento al div con class .box
+        // metodo a) utilizzando getElementsByClassName (occhio! torna un array)
+        // let boxElement = document.getElementsByClassName('box')[0]
+        // metodo b) utilizzando querySelector
+        let boxElement = document.querySelector('.box')
+
+        // ora boxElement è un riferimento al box!
+        console.log(boxElement)
+
+        // aggiungo la classe "box-animated" all'elemento: utilizzo la proprietà
+        // classList e seleziono il metodo "add"
+        boxElement.classList.add('box-animated', 'stefano')
+
+        // ANIMIAMO IL TESTO
+        // prendo un riferimento al div interno a .box
+        let textContainer = document.querySelector('.box div')
+        // adesso applico la classe 'text-animated'
+        textContainer.classList.add('text-animated')
+      }
+
+      const boxStop = function () {
+        // prendo un riferimento al div con class .box
+        // metodo a) utilizzando getElementsByClassName (occhio! torna un array)
+        // let boxElement = document.getElementsByClassName('box')[0]
+        // metodo b) utilizzando querySelector
+        let boxElement = document.querySelector('.box')
+
+        // ora boxElement è un riferimento al box!
+        console.log(boxElement)
+
+        // rimuovo la classe "box-animated" all'elemento: utilizzo la proprietà
+        // classList e seleziono il metodo "remove"
+        boxElement.classList.remove('box-animated')
+
+        // FERMO L'ANIMAZIONE DEL TESTO
+        // prendo un riferimento al div interno a .box
+        let textContainer = document.querySelector('.box div')
+        // adesso rimuovo la classe 'text-animated'
+        textContainer.classList.remove('text-animated')
+      }
+
+      // tutto in un bottone! :)
+      const startStop = function () {
+        // riferimento al div .box
+        let boxElement = document.querySelector('.box')
+        // riferimento al div con il testo
+        let textContainer = document.querySelector('.box div')
+        boxElement.classList.toggle('box-animated')
+        textContainer.classList.toggle('text-animated')
+      }
+
+      // APPLICHIAMO LA FUNZIONE boxStop() AL BOTTONE STOP!
+
+      // 1) prendo un riferimento al bottone stop
+      // due metodi: metodo a) utilizzando getElementById
+      const stopButtonElement = document.getElementById('stopButton')
+      // metodo b) utilizzando getElementsByTagName (occhio! torna un array)
+      // const stopButtonElement = document.getElementsByTagName('button')[1]
+
+      // ora stopButtonElement è un riferimento al bottone STOP!
+      console.log(stopButtonElement)
+
+      // applico la funzione boxStop al suo click
+      // stopButtonElement.onclick = boxStop
+      stopButtonElement.addEventListener('click', boxStop)
+    </script>
+  </body>
+</html>
