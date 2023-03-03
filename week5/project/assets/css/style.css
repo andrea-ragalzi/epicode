@@ -25,18 +25,23 @@ h1+h2 {
 }
 
 header {
-    background-color: #ffc017;
     margin-bottom: 2em;
+    background-color: #ffc017;
+    border-bottom: solid 1px #191919;
+    height: 32em;
 }
 
 nav {
+    background-color: #ffc017;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     border-bottom: solid 1px #191919;
     width: 100%;
-    position: sticky;
+    padding: 1em;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 1;
+    padding-left: 3em;
 }
 
 nav ul {
@@ -80,11 +85,19 @@ a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    z-index: 1;
+    background-color: #ffc017;
 }
 
 .hero-text {
-    margin-right: 15em;
+    margin-right: 20.5em;
+    padding-top: 6em;
+}
+
+.hero-text h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-top: 0.5em;
+    margin-bottom: 2.5em;
 }
 
 .trend {
@@ -95,8 +108,21 @@ a {
     margin: 0 auto;
 }
 
-.trend-title {
+.wrap-trend-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     float: left;
+    width: 20%;
+}
+
+.wrap-trend-title img {
+    width: 26px;
+    height: 26px;
+}
+
+.wrap-trend-title p {
+    margin: 0;
 }
 
 .trend-list {
@@ -115,6 +141,8 @@ a {
     width: 20px;
     height: 20px;
     margin-right: 8px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .trend-list .single-article p {

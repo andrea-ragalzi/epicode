@@ -20,20 +20,24 @@
                     <li><a class="nav-link" href="javascript:void(0)">Membership</a></li>
                     <li><a class="nav-link" href="javascript:void(0)">Write</a></li>
                     <li><a class="nav-link" href="javascript:void(0)">Sign In</a></li>
-                    <li><a class="nav-link round-link-1" href="javascript:void(0)">Get Started</a></li>
+                    <li><a id="startedButton" class="nav-link round-link-1" href="javascript:void(0)">Get Started</a></li>
                 </ul>
             </nav>
             <div class="hero">
                 <div class="hero-text">
                     <h1>Stay curious.</h1>
-                    <h2>Discover stories, thinking, and expertise from writers on any topic.</h2>
+                    <h2>Discover stories, thinking, and <br> expertise from writers on any topic.</h2>
                     <a class="round-link-2" href="javascript:void(0)">Start reading</a>
                 </div>
-                <object data="./assets/imgs/svg/mArtwork.svg" type="image/svg+xml"></object>
+                <object id="mArtwork" data="./assets/imgs/svg/mArtwork.svg" type="image/svg+xml"></object>
+                svg
             </div>
         </header>
         <section class="trend">
-            <p class="trend-title"><strong>Trending on medium</strong></p>
+            <div class="wrap-trend-title">
+                <img src="./assets/imgs/svg/trending.svg" alt="Trend Icon">
+                <p class="trend-title"><strong>Trending on medium</strong></p>
+            </div>
             <div class="trend-list">
                 <li class="single-article">
                     <div class="article-author">
@@ -211,6 +215,7 @@
             </div>
         </div>
     </div>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
