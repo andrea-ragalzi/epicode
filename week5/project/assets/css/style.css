@@ -1,0 +1,53 @@
+html, body {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20em;
+}
+
+nav {
+    background-color: blue;
+    display: flex;
+}
+
+nav ol {
+    display: flex;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+}
+
+.trend {
+    background-color: coral;
+}
+
+.wrap-trend ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrap-trend ol div {
+    display: flex;
+    align-items: center;
+}
+
+.main-wrap {
+    display: flex;
+}
+
+.main-section {
+    background-color: brown;
+}
+
+.main-article {
+    display: flex;
+}
+
