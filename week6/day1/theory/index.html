@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <!-- di default:
+    primary: blu
+    secondary: grigio
+    success: verde
+    info: azzurro
+    warning: giallo
+    danger: rosso
+    light: bianco
+    dark: nero
+ -->
+  <body>
+    <h1 class="text-light bg-dark">Hello, world!</h1>
+    <p
+      class="text-info-emphasis border-bottom border-danger border-opacity-25 border-4"
+    >
+      .text-info-emphasis
+    </p>
+
+    <p class="bg-success bg-gradient text-light py-3 text-center fs-3">
+      SUCCESS PARAGRAPH
+    </p>
+
+    <!-- applico un margine sottrattivo: 4 su tutto e 0 a destra -->
+    <h3 class="text-center m-4 me-0 shadow-lg border border-2">CIAO HANSEL!</h3>
+    <!-- {property}{sides}-{size} -->
+
+    <ul class="ms-3">
+      <li>ONE</li>
+      <li>TWO</li>
+    </ul>
+
+    <h3
+      class="pb-0 pb-md-3 pb-lg-5 m-0 m-sm-2 m-lg-4 m-xxl-5 bg-info text-light text-center"
+    >
+      <!-- si legge: dal breakpoint sm in su avrò margine 2
+                     dal breakpoint lg in su avrò margine 4
+                     dal breakpoint xxl in su avrò margine 5
+        -->
+      TEST MARGINE BREAKPOINTS
+    </h3>
+
+    <nav>
+      <!-- <ul class="m-0 p-0 d-flex"> -->
+      <ul
+        class="list-unstyled bg-primary text-light d-flex flex-column flex-sm-row justify-content-sm-between text-center p-sm-3"
+      >
+        <li>HOME</li>
+        <li>CONTACT</li>
+        <li>SERVICE</li>
+        <li>MAP</li>
+      </ul>
+    </nav>
+
+    <!-- qua ci va il vostro contenuto! -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
