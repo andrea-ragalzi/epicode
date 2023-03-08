@@ -80,18 +80,18 @@ const cars = [
 ]
 
 const randomLicensePlate = () => {
-    let lettereTarga = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let numeriTarga = "0123456789";
-    let numeroTarga = "";
+    let lettersLicensePlate = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let digitsLicensePlate = "0123456789";
+    let numberLicensePlate = "";
 
     for (let i = 0; i < 3; i++) {
-        numeroTarga += lettereTarga.charAt(Math.floor(Math.random() * lettereTarga.length));
+        numberLicensePlate += lettersLicensePlate.charAt(Math.floor(Math.random() * lettersLicensePlate.length));
     }
 
     for (let i = 0; i < 4; i++) {
-        numeroTarga += numeriTarga.charAt(Math.floor(Math.random() * numeriTarga.length));
+        numberLicensePlate += digitsLicensePlate.charAt(Math.floor(Math.random() * digitsLicensePlate.length));
     }
-    return numeroTarga;
+    return numberLicensePlate;
 }
 
 cars.forEach(car => car.licensePlate = randomLicensePlate());
