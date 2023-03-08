@@ -177,27 +177,75 @@ while (num != 32) {
     es. [f, b, e] --> [6, 2, 5]
 */
 console.log('ESERCIZIO 14');
-const charactersArray = ['g', 'n', 'u', 'z', 'd']
+const charactersArray = ['g', 'n', 'u', 'z', 'd'];
 let numbersArray = [];
 for (let char of charactersArray) {
     switch (char) {
-        case 'g':
-            numbersArray.push(7);
+        case 'a':
+            numbersArray.push(1);
             break;
-        case 'n':
-            numbersArray.push(12);
+        case 'b':
+            numbersArray.push(2);
             break;
-        case 'u':
-            numbersArray.push(19);
-            break;
-        case 'z':
-            numbersArray.push(21);
+        case 'c':
+            numbersArray.push(3);
             break;
         case 'd':
             numbersArray.push(4);
             break;
-        default:
+        case 'e':
+            numbersArray.push(5);
             break;
+        case 'f':
+            numbersArray.push(6);
+            break;
+        case 'g':
+            numbersArray.push(7);
+            break;
+        case 'h':
+            numbersArray.push(8);
+            break;
+        case 'i':
+            numbersArray.push(9);
+            break;
+        case 'l':
+            numbersArray.push(10);
+            break;
+        case 'm':
+            numbersArray.push(11);
+            break;
+        case 'n':
+            numbersArray.push(12);
+            break;
+        case 'o':
+            numbersArray.push(13);
+            break;
+        case 'p':
+            numbersArray.push(14);
+            break;
+        case 'q':
+            numbersArray.push(15);
+            break;
+        case 'r':
+            numbersArray.push(16);
+            break;
+        case 's':
+            numbersArray.push(17);
+            break;
+        case 't':
+            numbersArray.push(18);
+            break;
+        case 'u':
+            numbersArray.push(19);
+            break;
+        case 'v':
+            numbersArray.push(20);
+            break;
+        case 'z':
+            numbersArray.push(21);
+            break;
+        default:
+            numbersArray.push(-1);
     }
 }
 
