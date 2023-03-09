@@ -1,0 +1,16 @@
+@mixin customButton {
+    background-color: $fourthColor;
+    color: $secondColor;
+    padding: 0.5em 1em;
+    width: 8em;
+    font-size: 1.2em;
+}
+
+$colors: blue, yellow, green;
+
+@each $color in $colors {
+    .#{$color} {
+      background-color: color($color);
+    }
+  }
+  
