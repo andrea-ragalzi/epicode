@@ -1,0 +1,17 @@
+.medium__button {
+    background-color: $coloreScuro;
+    color: $coloreChiaro;
+    border-radius: 30px;
+    padding: {
+        top: 5px;
+        left: 10px;
+        bottom: 5px;
+        right: 10px
+    };
+    font-size: 20px;
+}
+
+.medium__button--small {
+    @extend .medium__button;
+    font-size: 12px;
+}

@@ -1,0 +1,46 @@
+.medium__button, .medium__button--small {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+.medium__button--small {
+  font-size: 12px;
+}
+
+.trending__card {
+  display: flex;
+}
+.trending__card .trending__card-index {
+  font-size: 20px;
+  color: lightgray;
+  font-weight: bold;
+}
+.trending__card .trending__card-info .trending__card-author {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.trending__card .trending__card-info .trending__card-author img {
+  width: 20px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.trending__card .trending__card-info .trending__card-title {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.trending__card .trending__card-info .trending__card-meta {
+  font-size: 10px;
+  color: grey;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}/*# sourceMappingURL=app.css.map */

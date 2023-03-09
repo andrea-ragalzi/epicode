@@ -1,0 +1,14 @@
+@mixin cerchio {
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+// @mixin text($size) { //alternativa fancy
+//     @if($size == "sm") {
+//         font-size: 10px;
+//     }
+// }
+
+@mixin text-sm {
+    font-size: 10px;
+}

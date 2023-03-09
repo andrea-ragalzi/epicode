@@ -1,0 +1,33 @@
+// Nell partial di spaziature “spacings”, crea dinamicamente le classi per
+// padding-(block|inline)-(sm|normal|md|lg|xl|xxl) e margin-(block|inline)-(sm|normal|md|lg|xl|xxl), usale quando
+// ritieni opportuno
+$direction: block, inline; //array
+$dimensioni: sm, md, lg;
+@each $singleDir in $direction {
+  @each $singleDimensione in $dimensioni {
+    //1. block >  secondo loop con sm, md, lg
+    //2. inline > secondo loop con sm, md, lg
+    .margin-#{$singleDir}-#{$singleDimensione} {
+      @if ($singleDimensione == sm) {
+        margin-#{$singleDir}: 10px;
+      }
+      @if ($singleDimensione == md) {
+        margin-#{$singleDir}: 20px;
+      }
+      @if ($singleDimensione == lg) {
+        margin-#{$singleDir}: 30px;
+      }
+    }
+    .padding-#{$singleDir}-#{$singleDimensione} {
+      @if ($singleDimensione == sm) {
+        padding-#{$singleDir}: 10px;
+      }
+      @if ($singleDimensione == md) {
+        padding-#{$singleDir}: 20px;
+      }
+      @if ($singleDimensione == lg) {
+        padding-#{$singleDir}: 30px;
+      }
+    }
+  }
+}
