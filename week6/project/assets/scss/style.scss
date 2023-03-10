@@ -1,0 +1,16 @@
+$theme-colors: (
+    "primary": green,
+    "secondary": red,
+    "success": blue,
+    "danger": purple,
+    "warning": orange,
+    "info": azure,
+    "light": yellow,
+    "dark": brown
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+ul {
+    background-color: map-get($theme-colors, "dark");
+}
