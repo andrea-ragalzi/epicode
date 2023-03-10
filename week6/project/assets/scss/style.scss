@@ -1,16 +1,221 @@
 $theme-colors: (
-    "primary": green,
-    "secondary": red,
+    "primary": #090202,
+    "secondary": #1f1f1f,
     "success": blue,
-    "danger": purple,
-    "warning": orange,
-    "info": azure,
-    "light": yellow,
-    "dark": brown
+    "danger": #0F0004,
+    "warning": rgb(59, 59, 59),
+    "info": rgb(59, 59, 59),
+    "light": #fdfdfd,
+    "dark": #090202
 );
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-ul {
+
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
     background-color: map-get($theme-colors, "dark");
+    color: map-get($theme-colors, "light");
+}
+
+.row {
+    flex-wrap: wrap;
+}
+
+header {
+    .header-section {
+        display: flex;
+        justify-content: space-between;
+        color: white !important;
+
+        .wrap-title-select {
+            display: flex;
+
+            h1 {
+                margin-right: 0.5em;
+            }
+        }
+
+        .wrap-layout-icons {
+            margin-right: 1em;
+        }
+    }
+}
+
+main {
+    margin-bottom: 8em;
+
+    @media screen and (min-width: 576px) {
+        margin-bottom: 1em;
+    }
+
+    .card {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        img {
+            transition: all 0.3s ease;
+            max-width: 100%;
+            height: auto;
+
+            @media screen and (min-width: 576px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .card:hover {
+        transform: scale(1.5);
+        z-index: 1;
+    }
+
+    .card:hover img {
+        animation: shake 0.5s ease-in-out;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        /*color: map-get($theme-colors, "secondary");*/
+        color: map-get($theme-colors, "light");
+        ;
+    }
+
+    .row {
+        width: 50%;
+        @media screen and (min-width: 768px) {
+            .row {
+                width: 80%;
+            }
+        }
+    }
+
+    .last-row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(2px, 0);
+    }
+
+    40% {
+        transform: translate(-2px, 0);
+    }
+
+    60% {
+        transform: translate(2px, 0);
+    }
+
+    80% {
+        transform: translate(-2px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+/* STYLE FOR PROFILE PAGE  */
+.profile {
+    margin: 0 5em;
+
+    header {
+        margin-bottom: 8em;
+
+        img {
+            height: 30px;
+        }
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+
+        h1 {
+            border-bottom: solid 1px map-get($theme-colors, "info");
+        }
+
+        h4 {
+            color: map-get($theme-colors, "info");
+        }
+
+        .language {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1em;
+            height: 8em;
+
+            h2 {
+                background-color: map-get($theme-colors, "info");
+                font-size: 0.8em;
+                padding: 0.3em 3em 0.3em 1em;
+                text-align: left;
+            }
+
+            img {
+                height: 100px;
+            }
+
+            .language-content {
+                display: inline;
+            }
+        }
+
+        .maturity {
+            margin-bottom: 1em;
+            height: 10em;
+        }
+
+        .autoplay {
+            height: 8em;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+
+            button {
+                background-color: map-get($theme-colors, "primary");
+                color: map-get($theme-colors, "info");
+                border: 1px solid map-get($theme-colors, "info");
+                border-radius: 0;
+                width: 8em;
+            }
+        }
+    }
+
 }
