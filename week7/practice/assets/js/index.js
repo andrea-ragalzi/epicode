@@ -58,7 +58,7 @@ console.log(luigi.isOlder(mario));
 luigi.age = mario.age;
 console.log(mario.isOlder(luigi));
 
-submitButtonRef.addEventListener('click', (event) => {
+formRef.addEventListener('submit', (event) => {
     event.preventDefault();
     const petName = document.getElementById('petName').value;
     const ownerName = document.getElementById('ownerName').value;
