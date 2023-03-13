@@ -28,8 +28,8 @@ class Pet {
         this.species = _species;
         this.breed = _breed;
     }
-    hasSameOwner(other_pet) {
-        return this.ownerName === other_pet.ownerName;
+    static hasSameOwner(pet1, pet2) {
+        return pet1.ownerName === pet2.ownerName;
     }
 }
 
