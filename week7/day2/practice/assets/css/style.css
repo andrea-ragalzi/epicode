@@ -1,0 +1,11 @@
+html, body {
+    height: 100vh;
+}
+button {
+    width: 5em;
+    margin: 0 auto;
+}
+
+.errorField {
+    display: none;
+}
