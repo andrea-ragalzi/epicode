@@ -65,7 +65,10 @@ deleteBtnRef.addEventListener('click', (event) => {
     deleteFullName();
 });
 
-let startTime = Math.floor(Date.now() / 1000);
+let startTime = parseInt(sessionStorage.getItem('startTime'));
+if (!startTime) {
+    startTime = Math.floor(Date.now() / 1000);
+}
 sessionStorage.setItem('startTime', startTime);
 let timerInterval = setInterval(() => {
     let currentTime = Math.floor(Date.now() / 1000);
