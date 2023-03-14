@@ -70,7 +70,7 @@ if (!startTime) {
     startTime = Math.floor(Date.now() / 1000);
 }
 sessionStorage.setItem('startTime', startTime);
-let timerInterval = setInterval(() => {
+setInterval(() => {
     let currentTime = Math.floor(Date.now() / 1000);
     let elapsedTime = currentTime - startTime;
     sessionStorage.setItem('elapsedTime', elapsedTime);
