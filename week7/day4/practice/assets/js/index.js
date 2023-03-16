@@ -135,5 +135,6 @@ formRef.addEventListener('submit', async (event) => {
     } else {
         console.error('Photos not found!');
     }
+    inputRef.value = '';
 });
 
