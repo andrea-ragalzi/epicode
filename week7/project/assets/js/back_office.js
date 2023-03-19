@@ -1,44 +1,52 @@
 const checkNameValue = () => {
     if (nameFormRef.value.trim()) {
-        nameFormRef.classList.remove('is-invalid')
-        nameFormRef.classList.add('is-valid')
+        nameFormRef.classList.remove('is-invalid');
+        nameFormRef.classList.add('is-valid');
+        return false;
     }
     else {
-        nameFormRef.classList.remove('is-valid')
-        nameFormRef.classList.add('is-invalid')
+        nameFormRef.classList.remove('is-valid');
+        nameFormRef.classList.add('is-invalid');
+        return true;
     }
 };
 
 const checkDescriptionValue = () => {
     if (descriptionFormRef.value.trim()) {
-        descriptionFormRef.classList.remove('is-invalid')
-        descriptionFormRef.classList.add('is-valid')
+        descriptionFormRef.classList.remove('is-invalid');
+        descriptionFormRef.classList.add('is-valid');
+        return false;
     }
     else {
-        descriptionFormRef.classList.remove('is-valid')
-        descriptionFormRef.classList.add('is-invalid')
+        descriptionFormRef.classList.remove('is-valid');
+        descriptionFormRef.classList.add('is-invalid');
+        return true;
     }
 };
 
 const checkImageUrlValue = () => {
     if (imageUrlFormRef.value.trim()) {
-        imageUrlFormRef.classList.remove('is-invalid')
-        imageUrlFormRef.classList.add('is-valid')
+        imageUrlFormRef.classList.remove('is-invalid');
+        imageUrlFormRef.classList.add('is-valid');
+        return false;
     }
     else {
-        imageUrlFormRef.classList.remove('is-valid')
-        imageUrlFormRef.classList.add('is-invalid')
+        imageUrlFormRef.classList.remove('is-valid');
+        imageUrlFormRef.classList.add('is-invalid');
+        return true;
     }
 };
 
 const checkBrandValue = () => {
     if (brandFormRef.value.trim()) {
-        brandFormRef.classList.remove('is-invalid')
-        brandFormRef.classList.add('is-valid')
+        brandFormRef.classList.remove('is-invalid');
+        brandFormRef.classList.add('is-valid');
+        return false;
     }
     else {
-        brandFormRef.classList.remove('is-valid')
-        brandFormRef.classList.add('is-invalid')
+        brandFormRef.classList.remove('is-valid');
+        brandFormRef.classList.add('is-invalid');
+        return true;
     }
 };
 
@@ -51,12 +59,15 @@ const checkPriceValue = () => {
     if (price) {
         if (!Number.isInteger(Number(price))) {
             priceInvalidRef.innerText = 'Price must be an integer!';
+            return true;
         } else {
             priceFormRef.classList.remove('is-invalid');
             priceFormRef.classList.add('is-valid');
+            return false;
         }
     } else {
         priceInvalidRef.innerText = 'Insert Price!';
+        return true;
     }
 };
 
@@ -126,6 +137,7 @@ const submitBtnRef = document.getElementById('submitBtn');
 formRef.addEventListener('submit', async (event) => {
     event.preventDefault();
     let isFormValid = checkFormValues();
+    console.log(isFormValid);
     if (!isFormValid) {
         return;
     }
@@ -139,7 +151,7 @@ formRef.addEventListener('submit', async (event) => {
     let errSave = await saveProduct(newProduct) // PUT || POST
     if (!errSave) {
         formRef.reset();
-        window.history.back();
+        window.location.href = "index.html";
     }
 });
 
