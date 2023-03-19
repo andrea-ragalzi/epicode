@@ -1,51 +1,55 @@
-const createCard = (product) => {
-    const cardRef = document.createElement('card');
-    cardRef.innerHTML = `<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-<img src="${product.imageUrl}" alt="Product">
-<div class="card-body">
-    <h4 class="card-title">${product.name}</h4>
-    <p class="card-text">${product.description}</p>
-    <a href="./detail.html?eventId=${product._id}" class="card-link text-warning">Modifica</a>
-    <a href="./detail.html?eventId=${product._id}" class="card-link text-success">Scopri di più</a>
-</div>
-</div>`;
+const createCardRef = (product) => {
+    const cardRef = document.createElement('div');
+    cardRef.innerHTML = `
+        <div class="card text-white bg-primary mb-5 px-4">
+            <h1 class="card-title display-4 mt-2 text-center text-info mt-4">${product.name}</h1>
+            <img src="${product.imageUrl}" alt="Product">
+            <div class="card-body p-0">
+                <p class="card-text">${product.description}</p>
+            </div>
+            <div class="d-flex justify-content-end mb-3">
+                <a href="./detail.html?eventId=${product._id}&edit=1" class="card-link text-warning fs-5 mr-5">Modifica</a>
+                <a href="./detail.html?eventId=${product._id}&edit=0" class="card-link text-success fs-5 mr-5">Scopri di più</a>
+            </div>
+        </div>
+    `;
     return cardRef;
 };
 
-const getProducts = async (url, api_key) => {
+
+const fetchProducts = async () => {
     try {
-        let response = await fetch(url, {
+        let response = await fetch(URL_PRODUCT, {
             headers: {
-                "Authorization": `Bearer ${api_key}`
+                "Authorization": `Bearer ${API_KEY}`
             }
         })
-        console.log(response);
         if (response.ok) {
             let products = await response.json();
             return products;
         } else {
-            console.log('Siamo riusciti a contattare il server, ma c\'è stato un problema');
+            alert('We were able to contact the server, but there was a problem');
             return null;
         }
     } catch (error) {
-        console.log(error);
+        alert(error);
     }
 };
-
-const showProducts = (products) => {
-    for (const product of products) {
-        const cardRef = createCard(product);
-        cardsSectionRef.appendChild(cardRef);
-    }
-};
-
-URL = 'https://striveschool-api.herokuapp.com/api/product/';
-API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0M2QzMGY4MWI0MjAwMTM5YjI4NzMiLCJpYXQiOjE2NzkwNDc5ODQsImV4cCI6MTY4MDI1NzU4NH0.iQD_fOv0wk1qHZ9oxO9jit-L53x8FpmQK4FeJt2OcgA';
 
 const cardsSectionRef = document.getElementById('cardsSection');
+const spinnerRef = document.getElementsByClassName('spinner-border')[0];
+const goUpRef = document.getElementById('goUp');
+
+const URL_PRODUCT = 'https://striveschool-api.herokuapp.com/api/product/';
+const API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0M2QzMGY4MWI0MjAwMTM5YjI4NzMiLCJpYXQiOjE2NzkwNDc5ODQsImV4cCI6MTY4MDI1NzU4NH0.iQD_fOv0wk1qHZ9oxO9jit-L53x8FpmQK4FeJt2OcgA';
+let products = [];
 
 window.onload = async () => {
-    let products = await getProducts(URL, API_KEY);
-    console.log(products);
-    showProducts(products);
-};
+    products = await fetchProducts();
+    spinnerRef.classList.add('d-none');
+    products.forEach(product => {
+        let cardRef = createCardRef(product);
+        cardsSectionRef.appendChild(cardRef);
+    });
+    goUpRef.classList.remove('d-none');
+}

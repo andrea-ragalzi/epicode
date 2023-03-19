@@ -1,46 +1,101 @@
-const addCard = (product) => {
-    const cardRef = document.createElement('card');
-    cardRef.innerHTML = `<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-<img src="${product.imageUrl}" alt="Product">
-<div class="card-body">
-    <h4 class="card-title">${product.name}</h4>
-    <p class="card-text">${product.description}</p>
-    <p class="card-text">${product.price} $</p>
-    <button class="btn btn-success">Compralo</button>
-</div>
-</div>`;
-    productDetailRef.appendChild(cardRef);
+const fillSectionRef = (product) => {
+    nameRef.innerText = product.name;
+    product.description.trim().split('    ').forEach(element => {
+        let newLiRef = document.createElement('li');
+        newLiRef.innerText = element;
+        descriptionRef.appendChild(newLiRef);
+    });
+    imageRef.setAttribute('src', product.imageUrl);
+    priceRef.innerText = `${product.price} $`;
+    brandRef.innerText = `${product.brand} presents`;
 };
 
-const getProduct = async (url, api_key) => {
+const deleteProduct = async () => {
     try {
-        let response = await fetch(url, {
+        let response = await fetch(`${URL_PRODUCT}${eventId}`, {
+            method: 'DELETE',
             headers: {
-                "Authorization": `Bearer ${api_key}`
+                "Authorization": `Bearer ${API_KEY}`
             }
         })
-        console.log(response);
+        if (response.ok) {
+            return false;
+        } else {
+            alert('We were able to contact the server, but there was a problem');
+            return true;
+        }
+    } catch (error) {
+        alert(error);
+    }
+};
+
+const fetchProduct = async () => {
+    try {
+        let response = await fetch(`${URL_PRODUCT}${eventId}`, {
+            headers: {
+                "Authorization": `Bearer ${API_KEY}`
+            }
+        })
         if (response.ok) {
             let product = await response.json();
             return product;
         } else {
-            console.log('Siamo riusciti a contattare il server, ma c\'è stato un problema');
+            alert('We were able to contact the server, but there was a problem');
             return null;
         }
     } catch (error) {
-        console.log(error);
+        alert(error);
     }
 };
 
-URL = 'https://striveschool-api.herokuapp.com/api/product/';
-API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0M2QzMGY4MWI0MjAwMTM5YjI4NzMiLCJpYXQiOjE2NzkwNDc5ODQsImV4cCI6MTY4MDI1NzU4NH0.iQD_fOv0wk1qHZ9oxO9jit-L53x8FpmQK4FeJt2OcgA';
+const showButtons = edit => {
+    if (edit) {
+        editBtnRef.classList.remove('d-none');
+        deleteBtnRef.classList.remove('d-none');
+    }
+    else {
+        buyBtnRef.classList.remove('d-none');
+        priceRef.classList.remove('d-none');
+    }
+};
 
-const productDetailRef = document.getElementById('productDetail');
+const URL_PRODUCT = 'https://striveschool-api.herokuapp.com/api/product/';
+const API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0M2QzMGY4MWI0MjAwMTM5YjI4NzMiLCJpYXQiOjE2NzkwNDc5ODQsImV4cCI6MTY4MDI1NzU4NH0.iQD_fOv0wk1qHZ9oxO9jit-L53x8FpmQK4FeJt2OcgA';
+
+const queryParams = new URLSearchParams(window.location.search);
+const eventId = queryParams.get('eventId');
+
+const nameRef = document.getElementById('name');
+const descriptionRef = document.getElementById('description');
+const imageRef = document.getElementById('image');
+const priceRef = document.getElementById('price');
+const brandRef = document.getElementById('brand');
+
+const buyBtnRef = document.getElementById('buyBtn');
+const editBtnRef = document.getElementById('editBtn');
+const deleteBtnRef = document.getElementById('deleteBtn');
+
+const deleteConfBtnRef = document.getElementById('deleteConfBtn');
+
+let product = {};
+
+editBtnRef.addEventListener('click', event => {
+    event.preventDefault();
+    window.location.href = `./back_office.html?eventId=${product._id}&edit=1`;
+});
+
+deleteConfBtnRef.addEventListener('click', async event => {
+    event.preventDefault();
+    const error = await deleteProduct();
+    if (!error) {
+        window.location.href = `./index.html`;
+    }
+});
 
 window.onload = async () => {
-    let eventId = new URLSearchParams(window.location.search).get('eventId')
-    url = `${URL}${eventId}`
-    let product = await getProduct(url, API_KEY);
-    console.log(product);
-    addCard(product);
+    product = await fetchProduct();
+    localStorage.setItem('curr_product', JSON.stringify(product));
+    fillSectionRef(product);
+    const edit = Boolean(parseInt(queryParams.get('edit')));
+    showButtons(edit);
 };
